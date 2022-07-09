@@ -1,0 +1,12 @@
+img {
+    width: 6rem;
+    height: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

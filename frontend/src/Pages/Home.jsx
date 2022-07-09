@@ -6,8 +6,8 @@ function Home() {
       <h1>C'est ici que tout commence...</h1>
       <div>
           <ul>
-          <NavLink to="/page1"><li>Page 1</li></NavLink>
-          <NavLink to="/page2"><li>Page 2</li></NavLink>
+          <NavLink to="/play"><li>Jouer</li></NavLink>
+          <NavLink to="/about"><li>A propos</li></NavLink>
           </ul>
       </div>
     </div>
