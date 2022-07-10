@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function GetTwoFlags() {
+  const navigate = useNavigate();
   // Faire en sorte de mettre la 404 dans un state
   const [firstCountry, setFirstCountry] = useState("");
   const [secondCountry, setSecondCountry] = useState("");
@@ -9,8 +11,7 @@ function GetTwoFlags() {
   const [fourthCountry, setFourthCountry] = useState("");
 
   const [flag, setFlag] = useState("");
-  const [countShowAnswer, setCountShowAnswer] = useState(1);
-  const [badAnswer, setBadAnswer] = useState(1);
+  const [badAnswer, setBadAnswer] = useState(false);
 
   const firstId = Math.floor(Math.random() * 250);
   const secondId = Math.floor(Math.random() * 250);
@@ -55,9 +56,9 @@ function GetTwoFlags() {
         firstCountry.translations.fra.common,
         flag.translations.fra.common
       );
-      voiceGameOver();
+      setBadAnswer(!badAnswer);
+      navigate("/score");
     }
-    setCountShowAnswer(countShowAnswer - 1);
     window.location.reload();
   }
 
@@ -71,9 +72,9 @@ function GetTwoFlags() {
         secondCountry.translations.fra.common,
         flag.translations.fra.common
       );
-      voiceGameOver();
+      setBadAnswer(!badAnswer);
+      navigate("/score");
     }
-    setCountShowAnswer(countShowAnswer - 1);
     window.location.reload();
   }
 
@@ -85,9 +86,9 @@ function GetTwoFlags() {
         thirdCountry.translations.fra.common,
         flag.translations.fra.common
       );
-      voiceGameOver();
+      setBadAnswer(!badAnswer);
+      navigate("/score");
     }
-    setCountShowAnswer(countShowAnswer - 1);
     window.location.reload();
   }
 
@@ -101,9 +102,9 @@ function GetTwoFlags() {
         fourthCountry.translations.fra.common,
         flag.translations.fra.common
       );
-      voiceGameOver();
+      setBadAnswer(!badAnswer);
+      navigate("/score");
     }
-    setCountShowAnswer(countShowAnswer - 1);
     window.location.reload();
   }
 
@@ -123,11 +124,6 @@ function GetTwoFlags() {
     const msg = new SpeechSynthesisUtterance(
       `Bonne réponse. C'est bien ${country}}`
     );
-    window.speechSynthesis.speak(msg);
-  }
-
-  function voiceGameOver() {
-    const msg = new SpeechSynthesisUtterance(`Tu as perdu !`);
     window.speechSynthesis.speak(msg);
   }
 
