@@ -7,7 +7,7 @@ function GetTwoFlags() {
   const [secondCountry, setSecondCountry] = useState("");
   const [thirdCountry, setThirdCountry] = useState("");
   const [fourthCountry, setFourthCountry] = useState("");
-  
+
   const [flag, setFlag] = useState("");
   const [countShowAnswer, setCountShowAnswer] = useState(1);
   const [badAnswer, setBadAnswer] = useState(1);
@@ -38,9 +38,9 @@ function GetTwoFlags() {
       } else if (randomNb === 1) {
         setFlag(resp.data[secondId]);
       } else if (randomNb === 2) {
-        setFlag(resp.data[thirdId])
+        setFlag(resp.data[thirdId]);
       } else {
-        setFlag(resp.data[fourthId])
+        setFlag(resp.data[fourthId]);
       }
     } catch (err) {
       console.log(err);
@@ -54,7 +54,6 @@ function GetTwoFlags() {
       voiceNotGood(
         firstCountry.translations.fra.common,
         flag.translations.fra.common
-
       );
       voiceGameOver();
     }
@@ -71,7 +70,6 @@ function GetTwoFlags() {
       voiceNotGood(
         secondCountry.translations.fra.common,
         flag.translations.fra.common
-
       );
       voiceGameOver();
     }
@@ -80,16 +78,12 @@ function GetTwoFlags() {
   }
 
   function checkThirdAnswer() {
-    if (
-      flag.translations.fra.common === thirdCountry.translations.fra.common
-    ) {
+    if (flag.translations.fra.common === thirdCountry.translations.fra.common) {
       voiceGood(thirdCountry.translations.fra.common);
     } else {
       voiceNotGood(
-
-       thirdCountry.translations.fra.common,
-       flag.translations.fra.common
-
+        thirdCountry.translations.fra.common,
+        flag.translations.fra.common
       );
       voiceGameOver();
     }
@@ -104,17 +98,14 @@ function GetTwoFlags() {
       voiceGood(fourthCountry.translations.fra.common);
     } else {
       voiceNotGood(
-
         fourthCountry.translations.fra.common,
         flag.translations.fra.common
-
       );
       voiceGameOver();
     }
     setCountShowAnswer(countShowAnswer - 1);
     window.location.reload();
   }
-
 
   useEffect(() => {
     getCountries();
@@ -143,38 +134,38 @@ function GetTwoFlags() {
   return (
     <div className="card">
       <div className="question">
-      <h1>A quel pays appartient ce drapeau ?</h1>
+        <h1>A quel pays appartient ce drapeau ?</h1>
       </div>
       <div className="proposition">
-      <div className="center-flag">
-        {flag === "" ? (
-          "chargement"
-        ) : (
-          <img alt="Vilain tricheur" src={flag.flags.svg} />
-        )}
-      </div>
-      <div className="button">
-        <button onClick={checkFirstAnswer}>
-          {firstCountry === ""
-            ? "chargement"
-            : firstCountry.translations.fra.common}
-        </button>
-        <button onClick={checkSecondAnswer}>
-          {secondCountry === ""
-            ? "chargement"
-            : secondCountry.translations.fra.common}
-        </button>
-        <button onClick={checkThirdAnswer}>
-          {thirdCountry === ""
-            ? "chargement"
-            : thirdCountry.translations.fra.common}
-        </button>
-        <button onClick={checkFourthAnswer}>
-          {fourthCountry === ""
-            ? "chargement"
-            : fourthCountry.translations.fra.common}
-        </button>
-      </div>
+        <div className="center-flag">
+          {flag === "" ? (
+            "chargement"
+          ) : (
+            <img alt="Vilain tricheur" src={flag.flags.svg} />
+          )}
+        </div>
+        <div className="button">
+          <button onClick={checkFirstAnswer}>
+            {firstCountry === ""
+              ? "chargement"
+              : firstCountry.translations.fra.common}
+          </button>
+          <button onClick={checkSecondAnswer}>
+            {secondCountry === ""
+              ? "chargement"
+              : secondCountry.translations.fra.common}
+          </button>
+          <button onClick={checkThirdAnswer}>
+            {thirdCountry === ""
+              ? "chargement"
+              : thirdCountry.translations.fra.common}
+          </button>
+          <button onClick={checkFourthAnswer}>
+            {fourthCountry === ""
+              ? "chargement"
+              : fourthCountry.translations.fra.common}
+          </button>
+        </div>
       </div>
     </div>
   );
