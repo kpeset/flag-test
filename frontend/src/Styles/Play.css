@@ -1,12 +1,25 @@
 img {
-    width: 6rem;
-    height: auto;
+    width: auto;
+    height: 10rem;
 }
 
-.hide {
-    display: none;
+.button {
+    display: flex;
+    justify-content: center;
 }
 
-.show {
-    display: block;
+button {
+    margin: 0px 20px 0px 20px;
+   width: 16rem;
+   height: 4rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.center-flag {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 20px 0;
 }

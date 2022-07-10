@@ -6,6 +6,8 @@ function GetTwoFlags() {
   const [firstCountry, setFirstCountry] = useState("");
   const [secondCountry, setSecondCountry] = useState("");
   const [flag, setFlag] = useState("");
+  const [countShowAnswer, setCountShowAnswer] = useState(1)
+  const [questionTurn, setQuestionTurn] = useState(5)
 
   const firstId = Math.floor(Math.random() * 250);
   const secondId = Math.floor(Math.random() * 250);
@@ -40,6 +42,8 @@ function GetTwoFlags() {
     } else {
       voiceNotGood(secondCountry.translations.fra.common, firstCountry.translations.fra.common);
     }
+    setCountShowAnswer(countShowAnswer - 1)
+    window.location.reload()
   }
 
   function checkSecondAnswer() {
@@ -50,12 +54,17 @@ function GetTwoFlags() {
     } else {
       voiceNotGood(firstCountry.translations.fra.common, secondCountry.translations.fra.common);
     }
+    setCountShowAnswer(countShowAnswer - 1)
+    window.location.reload()
+
   }
 
   useEffect(() => {
     getCountries();
     getFlag();
   }, []);
+
+  console.log(countShowAnswer)
 
   function voiceNotGood(country, badCountry) {
     const msg = new SpeechSynthesisUtterance(
@@ -69,8 +78,20 @@ function GetTwoFlags() {
     window.speechSynthesis.speak(msg);
   }
 
+  function howManyTurn() {
+    console.log(questionTurn)
+  }
+
   return (
     <div>
+      <h1>A quel pays appartient ce drapeau ?</h1>
+      <div className="center-flag">
+      {flag === "" ? (
+          "chargement"
+        ) : (
+          <img alt="Vilain tricheur" src={flag.flags.svg}/>
+        )}
+        </div>
       <div className="button">
         <button onClick={checkFirstAnswer}>
           {firstCountry === ""
@@ -82,13 +103,9 @@ function GetTwoFlags() {
             ? "chargement"
             : secondCountry.translations.fra.common}
         </button>
-        <div></div>
-        {flag === "" ? (
-          "chargement"
-        ) : (
-          <img alt="Vilain tricheur" src={flag.flags.svg} />
-        )}
-      </div>
+        </div>
+
+
     </div>
   );
 }
