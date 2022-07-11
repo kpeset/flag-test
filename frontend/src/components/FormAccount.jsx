@@ -30,7 +30,7 @@ function FormAccount() {
         </div>
         <div className="illustrations">
           <img alt="drapeaux du monde" src={flagspic} />
-          <h3>Différents mode de jeux</h3>
+          <h3>Différents modes de jeux</h3>
 <p>Les drapeaux n'ont aucun secrets pour toi? Tu connais les capitales sur le bout des doigts? Alors Earthathon est fait pour toi.</p>
 <img alt="médailles" src={medalspic} />
 <h3>Monte dans le classement</h3>
