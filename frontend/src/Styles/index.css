@@ -8,6 +8,7 @@
   --color-background : #070714;
   --color-btn: #6BB929;
   --color-red: #FF0000;
+  --color-blue: #12A79D;
 }
 
 * {
@@ -17,6 +18,7 @@
   scroll-behavior: smooth;
   font: inherit;
   font-family: var(--font-paragraph);
+  color: white;
 }
 
 /* body {
