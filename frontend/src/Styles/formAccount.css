@@ -1,0 +1,82 @@
+.promotion {
+    height: 90vh;
+}
+
+.form {
+    background-color: rgba(0, 0, 0, 0.611);
+    height: 90vh;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--font-title);
+    font-style: italic;
+    color: white;
+    text-align: center;
+    margin: 0 6rem 0 6rem;
+}
+
+.title-form {
+    padding-top: 4rem;
+}
+
+.describe-form p {
+    font-family: var(--font-title);
+    font-weight: 200;
+    text-align: center;
+    font-style: italic;
+    color: white;
+    padding-top: 2rem;
+    margin: 0 6rem 0 6rem;
+
+}
+
+button {
+background-color: var(--color-btn);
+padding: 1rem 4rem 1rem 4rem;
+border-radius: 30px;
+color: white;
+font-family: var(--font-title);
+font-weight: 700;
+font-style: italic;
+transition: 0.7s;
+}
+
+button:hover {
+    padding: 1.2rem 4.2rem 1.2rem 4.2rem;
+
+}
+
+.btn-form {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 4rem;
+}
+
+p {
+    color: white;
+}
+
+.btn-area {
+    width: 100vw;
+    height: 10rem;
+}
+
+h3 {
+    color: white;
+}
+
+.illustrations {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.illustrations img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 100px;
+    border: 0.4rem solid white;
+}
