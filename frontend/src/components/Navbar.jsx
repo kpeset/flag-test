@@ -18,6 +18,9 @@ function Navbar() {
         <a href="/">Accueil</a>
         <a href="/play">Jouer</a>
         <a href="/">A propos</a>
+        <div>
+        <img className="logo-burger" src={logo} />
+        </div>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

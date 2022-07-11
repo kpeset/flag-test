@@ -9,7 +9,8 @@ function FormAccount() {
       className="promotion"
       style={{
         backgroundImage: `url(${world1})`,
-        backgroundSize: "cover",
+        backgroundSize: "160vh",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="form">
@@ -37,7 +38,7 @@ function FormAccount() {
 
         </div>
       </div>
-    </div>
+     </div>
   );
 }
 

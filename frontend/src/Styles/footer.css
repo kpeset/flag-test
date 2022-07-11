@@ -1,0 +1,10 @@
+.white-line {
+    height: 1px;
+    width: 100vw;
+    background-color: white;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    margin-bottom: 3rem;
+}

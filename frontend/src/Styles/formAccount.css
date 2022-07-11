@@ -1,10 +1,9 @@
 .promotion {
-    height: 90vh;
-}
+height: auto;}
 
 .form {
-    background-color: rgba(0, 0, 0, 0.611);
-    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.658);
+    height: auto;
 }
 
 h2 {
@@ -53,7 +52,7 @@ button:hover {
     display: flex;
     justify-content: center;
     width: 100vw;
-    padding-top: 4rem;
+    padding-top: 8rem;
 }
 
 p {
@@ -85,7 +84,7 @@ p {
       rgba(102, 58, 87, 0) 50%,
       rgba(26, 26, 46, 1) 100%
     );
-    padding: 5rem 0 0 0;
+    padding: 7rem 0 0 0;
 }
 
 .illustrations img {
@@ -103,3 +102,8 @@ p {
     padding: 0 0 4rem 0;
 }
 
+.white-line {
+    height: 1px;
+    width: 100vw;
+    background-color: white;
+}
