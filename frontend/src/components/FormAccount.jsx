@@ -1,5 +1,6 @@
 import "../styles/formAccount.css";
 import world1 from "../assets/world1.jpg";
+import medalspic from "../assets/medalspic.jpg"
 import flagspic from "../assets/flagspic.jpg";
 
 function FormAccount() {
@@ -27,8 +28,13 @@ function FormAccount() {
           </div>
         </div>
         <div className="illustrations">
-            <h3>Découvre les drapeaux</h3>
           <img alt="drapeaux du monde" src={flagspic} />
+          <h3>Différents mode de jeux</h3>
+<p>Les drapeaux n'ont aucun secrets pour toi? Tu connais les capitales sur le bout des doigts? Alors Earthathon est fait pour toi.</p>
+<img alt="médailles" src={medalspic} />
+<h3>Monte dans le classement</h3>
+<p>Crée toi un compte, enchaine les parties, améliore tes connaissances et grimpe dans le classement pour décrocher la médaille !</p>
+
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@ h2 {
 
 }
 
-button {
+.btn-form button {
 background-color: var(--color-btn);
 padding: 1rem 4rem 1rem 4rem;
 border-radius: 30px;
@@ -40,11 +40,12 @@ color: white;
 font-family: var(--font-title);
 font-weight: 700;
 font-style: italic;
-transition: 0.7s;
+transition: 0.4s;
 }
 
 button:hover {
-    padding: 1.2rem 4.2rem 1.2rem 4.2rem;
+    padding: 1.125rem 4.5rem 1.125rem 4.5rem;
+    font-size: 18px;
 
 }
 
@@ -64,14 +65,27 @@ p {
     height: 10rem;
 }
 
-h3 {
+.illustrations h3 {
+    font-family: var(--font-title);
+    font-size: 1.5em;
     color: white;
+    font-weight: 700;
+    padding: 2rem 0 1rem 0;
 }
 
 .illustrations {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    background: rgb(93, 81, 125);
+    background: linear-gradient(
+      180deg,
+      rgba(93, 81, 125, 0.002) 0%,
+      rgba(102, 58, 87, 0) 50%,
+      rgba(26, 26, 46, 1) 100%
+    );
+    padding: 5rem 0 0 0;
 }
 
 .illustrations img {
@@ -80,3 +94,12 @@ h3 {
     border-radius: 100px;
     border: 0.4rem solid white;
 }
+
+.illustrations p {
+    font-family: var(--font-title);
+    text-align: center;
+    font-weight: 200;
+    margin: 0 6rem 0 6rem;
+    padding: 0 0 4rem 0;
+}
+

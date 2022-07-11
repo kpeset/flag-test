@@ -5,7 +5,8 @@
   --font-paragraph: "Roboto", sans-sherif;
   --font-title: "Exo 2", sans-sherif;
 
-  --color-btn: #6BB929
+  --color-background : #070714;
+  --color-btn: #6BB929;
 }
 
 * {
@@ -17,7 +18,7 @@
   font-family: var(--font-paragraph);
 }
 
-body {
+/* body {
   background: rgb(93, 81, 125);
   background: linear-gradient(
     90deg,
@@ -25,6 +26,10 @@ body {
     rgba(102, 58, 87, 1) 50%,
     rgba(26, 26, 46, 1) 100%
   );
+} */
+
+body {
+  background-color: var(--color-background);
 }
 
 .suite {
