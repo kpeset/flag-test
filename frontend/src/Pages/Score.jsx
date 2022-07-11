@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/Play.css"
+import "../styles/score.css"
 
 function Score () {
 const navigate = useNavigate()
@@ -13,12 +13,18 @@ navigate("/")
     }
 
     return (
-        <div className="score">
+        <div className="score-content">
+            <div className="score">
             <h1>Tu as perdu !</h1>
-        <div className="button-menu-score">
-            
+        
+        </div>
+        <div className="btn-menu-score">
+            <div className="replay">
             <button onClick={replay}>Rejouer</button>
+            </div>
+            <div className="home">
             <button onClick={home}>Accueil</button>
+        </div>
         </div>
         </div>
     )

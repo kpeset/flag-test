@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import("../styles/flagsQuestion.css");
 
 function FlagsQuestion({
@@ -7,9 +8,77 @@ function FlagsQuestion({
   fourthCountry,
   flag,
 }) {
-  const test = () => {
-    console.log(flag);
-  };
+  const navigate = useNavigate();
+
+  function checkFirstAnswer() {
+    if (flag.translations.fra.common === firstCountry.translations.fra.common) {
+      voiceGood(firstCountry.translations.fra.common);
+    } else {
+      voiceNotGood(
+        firstCountry.translations.fra.common,
+        flag.translations.fra.common
+      );
+      navigate("/score");
+    }
+    window.location.reload();
+  }
+
+  function checkSecondAnswer() {
+    if (
+      flag.translations.fra.common === secondCountry.translations.fra.common
+    ) {
+      voiceGood(secondCountry.translations.fra.common);
+    } else {
+      voiceNotGood(
+        secondCountry.translations.fra.common,
+        flag.translations.fra.common
+      );
+      navigate("/score");
+    }
+    window.location.reload();
+  }
+
+  function checkThirdAnswer() {
+    if (flag.translations.fra.common === thirdCountry.translations.fra.common) {
+      voiceGood(thirdCountry.translations.fra.common);
+    } else {
+      voiceNotGood(
+        thirdCountry.translations.fra.common,
+        flag.translations.fra.common
+      );
+      navigate("/score");
+    }
+    window.location.reload();
+  }
+
+  function checkFourthAnswer() {
+    if (
+      flag.translations.fra.common === fourthCountry.translations.fra.common
+    ) {
+      voiceGood(fourthCountry.translations.fra.common);
+    } else {
+      voiceNotGood(
+        fourthCountry.translations.fra.common,
+        flag.translations.fra.common
+      );
+      navigate("/score");
+    }
+    window.location.reload();
+  }
+
+  function voiceNotGood(badCountry, goodCountry) {
+    const msg = new SpeechSynthesisUtterance(
+      `Faux ! Ce n'est pas ${badCountry}.  La bonne réponse est ${goodCountry}`
+    );
+    window.speechSynthesis.speak(msg);
+  }
+
+  function voiceGood(country) {
+    const msg = new SpeechSynthesisUtterance(
+      `Bonne réponse. C'est bien ${country}}`
+    );
+    window.speechSynthesis.speak(msg);
+  }
 
   return (
     <div className="arch-question">
@@ -26,31 +95,38 @@ function FlagsQuestion({
         </div>
         <div className="proposition-question">
           {firstCountry === "" ? (
-            <h2>CHARGEMENT</h2>
+            <button>Chargement</button>
           ) : (
-            <button>{firstCountry.translations.fra.common}</button>
+            <button onClick={checkFirstAnswer}>
+              {firstCountry.translations.fra.common}
+            </button>
           )}
           {secondCountry === "" ? (
-            <h2>CHARGEMENT</h2>
+            <button>Chargement</button>
           ) : (
-            <button>{secondCountry.translations.fra.common}</button>
+            <button onClick={checkSecondAnswer}>
+              {secondCountry.translations.fra.common}
+            </button>
           )}
           {thirdCountry === "" ? (
-            <h2>CHARGEMENT</h2>
+            <button>Chargement</button>
           ) : (
-            <button>{thirdCountry.translations.fra.common}</button>
+            <button onClick={checkThirdAnswer}>
+              {thirdCountry.translations.fra.common}
+            </button>
           )}
           {fourthCountry === "" ? (
-            <h2>CHARGEMENT</h2>
+            <button>Chargement</button>
           ) : (
-            <button>{fourthCountry.translations.fra.common}</button>
+            <button onClick={checkFourthAnswer}>
+              {fourthCountry.translations.fra.common}
+            </button>
           )}
         </div>
         <div className="chrono">
-<h3>TEMPS RESTANT</h3>
-<h2>30</h2>
+          <h3>TEMPS RESTANT</h3>
+          <h2>30</h2>
         </div>
-  
       </div>
     </div>
   );
