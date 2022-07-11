@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --font-paragraph: "Roboto", sans-sherif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font: inherit;
+  font-family: var(--font-paragraph);
+}
+
+body {
+    background: rgb(93, 81, 125);
+    background: linear-gradient(
+      90deg,
+      rgba(93, 81, 125, 1) 0%,
+      rgba(102, 58, 87, 1) 50%,
+      rgba(26, 26, 46, 1) 100%
+    );
+  }

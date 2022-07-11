@@ -1,4 +1,4 @@
-import GetTwoFlags from "../Services/GetTwoFlags";
+import GetTwoFlags from "../services/GetTwoFlags";
 
 function Play() {
     return (

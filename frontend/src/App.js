@@ -1,8 +1,10 @@
-import Home from "./Pages/Home";
-import Play from "./Pages/Play";
-import About from "./Pages/About";
-import Score from "./Pages/Score";
-import "./Styles/Play.css"
+import Home from "./pages/Home";
+import Play from "./pages/Play";
+import About from "./pages/About";
+import Score from "./pages/Score";
+
+import Navbar from "./components/Navbar";
+
 
 import { Route, Routes } from "react-router-dom";
 
@@ -10,6 +12,7 @@ function App() {
   return (
   
   <div>
+    <Navbar />
   <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/play" element={<Play />} />

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import "../styles/Play.css"
 
 function Score () {
 const navigate = useNavigate()
