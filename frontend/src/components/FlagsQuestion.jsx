@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import("../styles/flagsQuestion.css");
 
@@ -8,7 +10,33 @@ function FlagsQuestion({
   fourthCountry,
   flag,
 }) {
+  const [timer, setTimer] = useState(15);
+  const [chronoColorA, setChronoColorA] = useState(0)
+  const [chronoColorB, setChronoColorB] = useState(128)
+
+
   const navigate = useNavigate();
+
+
+useEffect (() => {
+  if (timer >0) {
+    setTimeout(() => setTimer(timer - 1) , 1000);
+  } else {
+   navigate("/score")
+  }
+}, [timer])
+
+const changeColor = () => {
+  if (chronoColorA < 128) {
+    setChronoColorA( chronoColorA + 16)
+  } if (chronoColorA === 128) {
+    setChronoColorB(chronoColorB - 16)
+  }
+}
+
+useEffect (() => {
+changeColor()
+},[timer])
 
   function checkFirstAnswer() {
     if (flag.translations.fra.common === firstCountry.translations.fra.common) {
@@ -125,7 +153,8 @@ function FlagsQuestion({
         </div>
         <div className="chrono">
           <h3>TEMPS RESTANT</h3>
-          <h2>30</h2>
+          <h2>{timer}</h2>
+          <div className="test-barre" style={{width:`${timer}rem`,background: `rgb(${chronoColorA}, ${chronoColorB}, 0)`}}/>
         </div>
       </div>
     </div>

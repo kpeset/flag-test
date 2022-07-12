@@ -48,12 +48,13 @@
 
 .chrono {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     font-style: italic;
 
     padding: 1rem;
-    margin: 6rem
-
+    margin: 6rem;
 }
 
   .chrono h3 {
@@ -65,3 +66,10 @@
   .chrono h2 {
     font-size: 2rem;
   }
+
+  .test-barre {
+    height: 1rem;
+    border-radius: 100px;
+  }
+
+   
