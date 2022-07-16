@@ -1,0 +1,105 @@
+.register-content {
+    background: linear-gradient(
+        180deg,
+        rgba(93, 81, 125, 0.002) 0%,
+        rgba(102, 58, 87, 0) 50%,
+        rgba(26, 26, 46, 1) 100%
+      );
+}
+
+.signin-login-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.signin-btn {
+    background-color: var(--color-btn);
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 30px;
+    color: white;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-style: italic;
+    transition: 0.4s;
+    width: 7rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.login-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    color: white;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-style: italic;
+    transition: 0.4s;
+    width: 7rem;
+    font-size: 1rem;
+    text-align: center;
+    border: solid 1px white;
+
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: var(--font-title);
+    color: white;
+    margin: 2.5rem 0 1.5rem 0;
+}
+
+.info-register p {
+    font-family: var(--font-title);
+    font-size:0.75rem;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 1.5rem 1rem 1.5rem;
+}
+
+.warning-register p {
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+.signin-form {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin-form p {
+   font-family: var(--font-title); 
+   font-weight: 800;
+   font-size: 0.75rem;
+   font-style: italic;
+}
+
+.signin-form input[type="text"],
+.signin-form input[type="password"],
+.signin-form input[type="email"]{
+    padding: 0.3rem 0rem 0.3rem 1.5rem;
+    width: 75%;
+    outline: none;
+    border-radius: 0.6rem;
+    border: 0.125rem solid rgba(0, 0, 0, 0);
+    transition: 0.7s;
+    margin: 0.5rem 0 0.5rem 0;
+
+}
+
+.signin-form input[type="text"]:focus,
+.signin-form input[type="password"]:focus,
+.signin-form input[type="email"]:focus{
+border-color: var(--color-btn);
+
+}
+
+.signin-form .signin-btn {
+    margin-top: 1rem;
+    width: 40%;
+}

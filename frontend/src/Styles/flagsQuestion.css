@@ -1,0 +1,87 @@
+.arch-question {
+    heigh:100vh;
+  }
+  
+  .proposition-question button {
+      margin: 0px 20px 0px 20px;
+      width: 39vw;
+      height: 4rem;
+      background-color: black;
+      border-radius: 30px;
+      transition: 0.6s;
+      border: 4px solid white;
+      color: white;
+      margin-bottom: 1rem;
+      font-family: var(--font-title);
+      font-size: 0.9rem;
+    }
+    
+    .proposition-question button:hover {
+      border-color: var(--color-btn);
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+  
+    .proposition-question {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .object-question img {
+      width: auto;
+      max-width: 95vw;
+      height: 16rem;
+    }
+  
+    .card-question {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .card-question h1 {
+      text-align: center;
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      padding: 0 0 1rem 0;
+      margin: 0 2px 0 2px;
+    }
+  
+  .chrono {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-style: italic;
+  margin: 0 0 2rem 0;
+  }
+  
+    .chrono h3 {
+      font-style: italic;
+      text-align: center;
+      font-family: var(--font-title);
+    }
+  
+    .chrono h2 {
+      font-size: 1rem;
+    }
+  
+    .test-barre {
+      height: 1rem;
+      border-radius: 100px;
+    }
+
+    .loading {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: center;
+    }
+
+    .loading h1 {
+      font-size: 3rem;
+    }
+  
+     

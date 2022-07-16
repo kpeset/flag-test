@@ -1,16 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/Play.css"
+import "../styles/score.css"
 
 function Score () {
 const navigate = useNavigate()
 
     function home(){
+        localStorage.setItem("Score:count", null)
 navigate("/")
     }
 
     function replay() {
+        localStorage.setItem("Score:count", null)
         navigate("/play")
     }
+
+
 
     return (
         <div className="score">

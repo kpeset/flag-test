@@ -1,8 +1,7 @@
-import GetTwoFlags from "../services/GetTwoFlags";
-
+import GetCountries from "../components/GetCountries";
 function Play() {
     return (
-    <GetTwoFlags />
+    <GetCountries />
         );
   }
   

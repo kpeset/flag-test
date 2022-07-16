@@ -7,7 +7,7 @@ function Footer () {
             <div className="white-line" />
             <div className="footer-content">
             <img alt="logo Earthathon" src={logo} />
-            <div className="footer-text"><h1>Pour toutes questions, réclamations ou suggestions veuillez me contacter à l'adresse : kevin.peset@gmail.com</h1></div>
+            <div className="footer-text"><p>Pour toutes questions, réclamations ou suggestions veuillez me contacter à l'adresse : kevin.peset@gmail.com</p></div>
             </div>
         </div>
     )
