@@ -1,18 +1,36 @@
 const express = require("express");
 const app = express();
-const port = 4000;
-const cowsay = require("cowsay");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+const authRoute = require("./routes/auth");
+const successRoute = require("./routes/success");
+const scoreRoute = require("./routes/updateScore");
+const alluser = require("./routes/alluser")
 
-app.listen(port, (err) => {
-  if (err) {
-    console.error("Le serveur ne fonctionne pas");
-  } else {
-    console.log(
-      cowsay.say({
-        text: `Le serveur backend fonctionne sur le serveur ${port}`,
-        e: "oO",
-        T: "U ",
-      })
-    );
-  }
-});
+dotenv.config();
+
+// CONNEXION A LA DATABASE
+
+// ici je fais appel à ma variable d'environnement afin que mon password ne soit pas visible de ceux qui ont accès au code
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () =>
+  console.log("La connexion à la base de donnée est faite...")
+);
+
+// MIDDLEWARE
+app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
+app.use(cookieParser());
+
+// ROUTE DE MON MIDDLEWARE
+app.use("/api", authRoute);
+app.use("/api/success", successRoute);
+app.use("/api/alluser", alluser)
+
+app.listen(8080, () => console.log("Le backend fonctionne parfaitement !"));

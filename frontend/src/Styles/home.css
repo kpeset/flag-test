@@ -6,7 +6,7 @@ height: auto;}
     height: auto;
 }
 
-h2 {
+.title-form h2 {
     font-size: 3rem;
     font-weight: 600;
     font-family: var(--font-title);
@@ -42,7 +42,7 @@ font-style: italic;
 transition: 0.4s;
 }
 
-button:hover {
+.btn-form button:hover {
     padding: 1.125rem 4.5rem 1.125rem 4.5rem;
     font-size: 18px;
 
@@ -55,7 +55,7 @@ button:hover {
     padding-top: 8rem;
 }
 
-p {
+.form p {
     color: white;
 }
 

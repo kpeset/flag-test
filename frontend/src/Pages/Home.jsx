@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import world1 from "../assets/world1.jpg";
 import medalspic from "../assets/medalspic.jpg";
@@ -25,7 +24,7 @@ function Home() {
     >
       <div className="form">
         <div className="title-form">
-          <h2>LEARN AND FUN!</h2>
+          <h2>FUN WITH FLAGS !</h2>
         </div>
         <div className="describe-form">
           <p>
