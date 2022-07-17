@@ -11,6 +11,11 @@
     font-style: italic;
 }
 
+.ranking-content img {
+    width: auto;
+    height: 10rem;
+}
+
 .podium, .ranking-title {
     display: flex;
     justify-content: space-around;

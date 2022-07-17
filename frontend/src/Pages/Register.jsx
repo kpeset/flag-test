@@ -5,6 +5,9 @@ import "../styles/register.css";
 
 function Register() {
 
+  localStorage.setItem("Score:count",0)
+
+
   const [isRegister, setIsRegister] = useState("signin");
 
   const [registerValue, setRegisterValue] = useState({

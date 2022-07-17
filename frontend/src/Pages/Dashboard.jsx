@@ -11,14 +11,13 @@ function Dashboard() {
   const navigate = useNavigate();
 
   const [pseudo, setPseudo] = useState("");
-  const [playerList, setPlayersList] = useState([])
+  const [playerList, setPlayersList] = useState([]);
 
   const playGame = () => {
-    navigate("/play")
-  }
+    navigate("/play");
+  };
 
-
-  const search = obj => obj.pseudo === localStorage.getItem("pseudo");
+  const search = (obj) => obj.pseudo === localStorage.getItem("pseudo");
 
   useEffect(() => {
     axios
@@ -38,6 +37,7 @@ function Dashboard() {
     });
   }, []);
 
+  localStorage.setItem("Score:count", 0);
 
   const alreadyPlayed = () => {
     if (localStorage.getItem("bestscore") === "0") {
@@ -51,7 +51,11 @@ function Dashboard() {
       return (
         <>
           <h2>
-            Tu es classé  {`${playerList.findIndex(search) + 1}${playerList.findIndex(search) + 1 === 1 ? "er" : "ème"}`} sur {playerList.length} joueurs avec un score total de{" "}
+            Tu es classé{" "}
+            {`${playerList.findIndex(search) + 1}${
+              playerList.findIndex(search) + 1 === 1 ? "er" : "ème"
+            }`}{" "}
+            sur {playerList.length} joueurs avec un score total de{" "}
             {localStorage.getItem("bestscore")} points !
           </h2>
           <h2>Penses-tu pouvoir faire mieux ?</h2>
@@ -59,8 +63,6 @@ function Dashboard() {
       );
     }
   };
-
-
 
   return (
     <div className="dashboard-content">

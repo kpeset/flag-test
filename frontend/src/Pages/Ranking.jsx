@@ -18,9 +18,9 @@ function Ranking() {
     });
   }, []);
 
-  //   const topThree = playersList.map((joueur) => (
-  // setTopPlayers(joueur)
-  //   ))
+  localStorage.setItem("Score:count",0)
+
+
 
   return (
     <div className="ranking-content">

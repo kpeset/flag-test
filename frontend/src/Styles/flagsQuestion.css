@@ -82,8 +82,12 @@
       vertical-align: center;
     }
 
-    .loading h1 {
-      font-size: 3rem;
+    .loading h1,
+    .title-question h1 {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: white;
+      text-align: center;
     }
   
      

@@ -13,6 +13,9 @@ function Home() {
     navigate('/register')
   }
 
+  localStorage.setItem("Score:count",0)
+
+
   return (
     <div
       className="promotion"
