@@ -22,7 +22,6 @@ const [pseudo, setPseudo] = useState("")
        
       }, []);
 
-console.log(pseudo)
 
     return (
         <div className="test">

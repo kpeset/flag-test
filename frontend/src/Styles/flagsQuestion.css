@@ -65,6 +65,8 @@
   
     .chrono h2 {
       font-size: 1rem;
+      color: white;
+      font-family: var(--font-title);
     }
   
     .test-barre {

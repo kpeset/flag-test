@@ -7,6 +7,7 @@ import Score from "./pages/Score";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Test from "./pages/Test";
+import Ranking from "./pages/Ranking";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -24,8 +25,6 @@ function App() {
 
   const myUser = localStorage.getItem("utilisateur")
 
-  console.log(`infoUser : ${infoUser}`)
-
   useEffect(() => {
 setInfoUser(myUser)
   }, [])
@@ -42,6 +41,7 @@ setInfoUser(myUser)
   <Route path="/register" element={<Register />} />
   <Route path="/dashboard" element={<Dashboard />} />
   <Route path="/test" element={<Test />} />
+  <Route path="/ranking" element={<Ranking />} />
 
   </Routes>
   <Footer />

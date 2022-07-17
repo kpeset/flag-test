@@ -13,7 +13,7 @@ height: auto;}
     font-style: italic;
     color: white;
     text-align: center;
-    margin: 0 6rem 0 6rem;
+    margin: 0 2rem 0 2rem;
 }
 
 .title-form {
@@ -27,7 +27,7 @@ height: auto;}
     font-style: italic;
     color: white;
     padding-top: 2rem;
-    margin: 0 6rem 0 6rem;
+    margin: 0 2rem 0 2rem;
 
 }
 
@@ -98,7 +98,7 @@ transition: 0.4s;
     font-family: var(--font-title);
     text-align: center;
     font-weight: 200;
-    margin: 0 6rem 0 6rem;
+    margin: 0 2rem 0 2rem;
     padding: 0 0 4rem 0;
 }
 

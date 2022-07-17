@@ -48,10 +48,10 @@ function GetCountries() {
   return (
     <div>
       <FlagsQuestion
-        firstCountry={firstCountry}
-        secondCountry={secondCountry}
-        thirdCountry={thirdCountry}
-        fourthCountry={fourthCountry}
+        firstcountry={firstCountry}
+        secondcountry={secondCountry}
+        thirdcountry={thirdCountry}
+        fourthcountry={fourthCountry}
         flag={flag}
       />
     </div>

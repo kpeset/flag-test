@@ -1,3 +1,50 @@
-.dashboard-content h1 {
+.dashboard-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.dashboard-content h1,
+.dashboard-content h2 {
     color: white;
 }
+
+.dashboard-content h1 {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 2.688rem;
+    margin: 1rem 2rem 1rem 2rem;
+
+}
+
+.dashboard-content h2 {
+    font-family: var(--font-title);
+    font-weight: 200;
+    margin: 2rem;
+}
+
+.dashboard-content img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 100px;
+    border: 0.4rem solid white;
+}
+
+.btn-dashboard button {
+    background-color: var(--color-btn);
+    padding: 1rem 4rem 1rem 4rem;
+    border-radius: 30px;
+    color: white;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-style: italic;
+    transition: 0.4s;
+    }
+    
+    .btn-dashboard button:hover {
+        padding: 1.125rem 4.5rem 1.125rem 4.5rem;
+        font-size: 18px;
+    
+    }

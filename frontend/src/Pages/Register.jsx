@@ -33,7 +33,6 @@ function Register() {
         }
       )
       .then(function (response) {
-        console.log(response.data.utilisateur);
         localStorage.setItem("utilisateur",response.data.utilisateur)
         window.location = "/dashboard"
       })
@@ -69,7 +68,6 @@ function Register() {
           password: registerValue.password,
         })
         .then(function (response) {
-          console.log(response);
           alert("Votre compte a été crée avec succès.");
           window.location = "/";
         })

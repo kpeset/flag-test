@@ -6,8 +6,9 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
 const successRoute = require("./routes/success");
-const scoreRoute = require("./routes/updateScore");
+const updateScore = require("./routes/updateScore");
 const alluser = require("./routes/alluser")
+const ranking = require("./routes/ranking")
 
 dotenv.config();
 
@@ -32,5 +33,7 @@ app.use(cookieParser());
 app.use("/api", authRoute);
 app.use("/api/success", successRoute);
 app.use("/api/alluser", alluser)
+app.use("/api/updateScore/", updateScore);
+app.use("/api/ranking", ranking);
 
 app.listen(8080, () => console.log("Le backend fonctionne parfaitement !"));

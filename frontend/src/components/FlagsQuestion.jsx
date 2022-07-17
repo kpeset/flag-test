@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import("../styles/flagsQuestion.css");
 
 function FlagsQuestion({
-  firstCountry,
-  secondCountry,
-  thirdCountry,
-  fourthCountry,
+  firstcountry,
+  secondcountry,
+  thirdcountry,
+  fourthcountry,
   flag,
 }) {
   const [timer, setTimer] = useState(15);
@@ -41,6 +41,8 @@ function FlagsQuestion({
     }
   }, [timer]);
 
+
+
   const changeColor = () => {
     if (chronoColorA < 128) {
       setChronoColorA(chronoColorA + 16);
@@ -60,16 +62,16 @@ function FlagsQuestion({
   }, [score]);
 
   const incrementScore = () => {
-    setScore((current) => current + 1);
+    setScore((current) => current + 1 * timer);
   };
 
   function checkFirstAnswer() {
-    if (flag.translations.fra.common === firstCountry.translations.fra.common) {
+    if (flag.translations.fra.common === firstcountry.translations.fra.common) {
 incrementScore()
-      voiceGood(firstCountry.translations.fra.common);
+      voiceGood(firstcountry.translations.fra.common);
     } else {
       voiceNotGood(
-        firstCountry.translations.fra.common,
+        firstcountry.translations.fra.common,
         flag.translations.fra.common
       );
       navigate("/score");
@@ -79,14 +81,14 @@ incrementScore()
 
   function checkSecondAnswer() {
     if (
-      flag.translations.fra.common === secondCountry.translations.fra.common
+      flag.translations.fra.common === secondcountry.translations.fra.common
 
     ) {
       incrementScore()
-      voiceGood(secondCountry.translations.fra.common);
+      voiceGood(secondcountry.translations.fra.common);
     } else {
       voiceNotGood(
-        secondCountry.translations.fra.common,
+        secondcountry.translations.fra.common,
         flag.translations.fra.common
       );
       navigate("/score");
@@ -95,14 +97,14 @@ incrementScore()
   }
 
   function checkThirdAnswer() {
-    if (flag.translations.fra.common === thirdCountry.translations.fra.common) {
+    if (flag.translations.fra.common === thirdcountry.translations.fra.common) {
       incrementScore()
 
 
-      voiceGood(thirdCountry.translations.fra.common);
+      voiceGood(thirdcountry.translations.fra.common);
     } else {
       voiceNotGood(
-        thirdCountry.translations.fra.common,
+        thirdcountry.translations.fra.common,
         flag.translations.fra.common
       );
       navigate("/score");
@@ -112,14 +114,14 @@ incrementScore()
 
   function checkFourthAnswer() {
     if (
-      flag.translations.fra.common === fourthCountry.translations.fra.common
+      flag.translations.fra.common === fourthcountry.translations.fra.common
     ) {
       incrementScore()
 
-      voiceGood(fourthCountry.translations.fra.common);
+      voiceGood(fourthcountry.translations.fra.common);
     } else {
       voiceNotGood(
-        fourthCountry.translations.fra.common,
+        fourthcountry.translations.fra.common,
         flag.translations.fra.common
       );
       navigate("/score");
@@ -147,26 +149,26 @@ incrementScore()
     return (
       <div className="card-question">
         <div className="title-question">
-          <h1>A QUEL PAYS APPARTIENT CE DRAPEAUuu ?</h1>
+          <h1>A QUEL PAYS APPARTIENT CE DRAPEAU ?</h1>
         </div>
         <div className="object-question">
           <img src={flag.flags.svg} alt="Vilain tricheur" />
         </div>
         <div className="proposition-question">
-          <button type="button" onClick={checkFirstAnswer} firstCountry={firstCountry} flag={flag}>
-            {firstCountry.translations.fra.common}
+          <button type="button" onClick={checkFirstAnswer} firstCountry={firstcountry} flag={flag}>
+            {firstcountry.translations.fra.common}
           </button>
 
-          <button type="button" onClick={checkSecondAnswer} secondCountry={secondCountry} flag={flag}>
-            {secondCountry.translations.fra.common}
+          <button type="button" onClick={checkSecondAnswer} secondCountry={secondcountry} flag={flag}>
+            {secondcountry.translations.fra.common}
           </button>
 
-          <button type="button" onClick={checkThirdAnswer} thirdCountry={secondCountry} flag={flag}>
-            {thirdCountry.translations.fra.common}
+          <button type="button" onClick={checkThirdAnswer} thirdCountry={secondcountry} flag={flag}>
+            {thirdcountry.translations.fra.common}
           </button>
 
-          <button type="button" onClick={checkFourthAnswer} fourthCountry={fourthCountry} flag={flag}>
-            {fourthCountry.translations.fra.common}
+          <button type="button" onClick={checkFourthAnswer} fourthCountry={fourthcountry} flag={flag}>
+            {fourthcountry.translations.fra.common}
           </button>
         </div>
         <div className="chrono">
@@ -192,12 +194,13 @@ incrementScore()
     );
   };
   
+
   return (
     <div className="arch-question">
-      {firstCountry === "" ||
-      secondCountry === "" ||
-      thirdCountry === "" ||
-      fourthCountry === "" ||
+      {firstcountry === "" ||
+      secondcountry === "" ||
+      thirdcountry === "" ||
+      fourthcountry === "" ||
       flag === ""
         ? loading()
         : showQuestion()}
