@@ -1,17 +1,13 @@
-## TEMPLATE
+EARTHATHON
+Jeu sur navigateur - Géograpgie
 
-Template pour React et Node.
+TECHNOS UTILISÉES
+· Stack M.E.R.N · Géo API
 
-## Installation & Utilisation
+Installation & Utilisation
+· Cloner le repo · npm run setup
 
-### Initialiser le projet
-
-- Cloner le repo
-- Installer les dépendances avec npm run setup
-
-### Commandes disponibles
-
-- `dev` : Permet de lancer le back et le front
-- `frontend` : Permet de lancer le front
-- `backend` : Permet de lancer le back
-
+Commandes disponibles
+npm run dev
+npm run frontend
+npm run backend
